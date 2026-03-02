@@ -28,24 +28,166 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_1 = new System.Windows.Forms.TextBox();
+            this.lbl_sinal = new System.Windows.Forms.Label();
+            this.lbl_resultado = new System.Windows.Forms.Label();
+            this.txt_2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_som = new System.Windows.Forms.Button();
+            this.btn_limpar = new System.Windows.Forms.Button();
+            this.btn_sair = new System.Windows.Forms.Button();
+            this.btn_sub = new System.Windows.Forms.Button();
+            this.btn_Mult = new System.Windows.Forms.Button();
+            this.btn_div = new System.Windows.Forms.Button();
+            this.btn_comp = new System.Windows.Forms.Button();
+            this.btn_Par = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_1
             // 
-            this.textBox1.Location = new System.Drawing.Point(369, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_1.Location = new System.Drawing.Point(107, 59);
+            this.txt_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_1.Name = "txt_1";
+            this.txt_1.Size = new System.Drawing.Size(148, 26);
+            this.txt_1.TabIndex = 0;
+            this.txt_1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lbl_sinal
+            // 
+            this.lbl_sinal.AutoSize = true;
+            this.lbl_sinal.Location = new System.Drawing.Point(64, 112);
+            this.lbl_sinal.Name = "lbl_sinal";
+            this.lbl_sinal.Size = new System.Drawing.Size(18, 20);
+            this.lbl_sinal.TabIndex = 1;
+            this.lbl_sinal.Text = "?";
+            // 
+            // lbl_resultado
+            // 
+            this.lbl_resultado.AutoSize = true;
+            this.lbl_resultado.Location = new System.Drawing.Point(171, 171);
+            this.lbl_resultado.Name = "lbl_resultado";
+            this.lbl_resultado.Size = new System.Drawing.Size(18, 20);
+            this.lbl_resultado.TabIndex = 2;
+            this.lbl_resultado.Text = "?";
+            // 
+            // txt_2
+            // 
+            this.txt_2.Location = new System.Drawing.Point(107, 106);
+            this.txt_2.Name = "txt_2";
+            this.txt_2.Size = new System.Drawing.Size(148, 26);
+            this.txt_2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(103, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "_________________";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // btn_som
+            // 
+            this.btn_som.Location = new System.Drawing.Point(387, 52);
+            this.btn_som.Name = "btn_som";
+            this.btn_som.Size = new System.Drawing.Size(123, 41);
+            this.btn_som.TabIndex = 5;
+            this.btn_som.Text = "Somar";
+            this.btn_som.UseVisualStyleBackColor = true;
+            this.btn_som.Click += new System.EventHandler(this.btn_somar_Click);
+            // 
+            // btn_limpar
+            // 
+            this.btn_limpar.Location = new System.Drawing.Point(68, 292);
+            this.btn_limpar.Name = "btn_limpar";
+            this.btn_limpar.Size = new System.Drawing.Size(100, 41);
+            this.btn_limpar.TabIndex = 6;
+            this.btn_limpar.Text = "Limpar";
+            this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
+            // 
+            // btn_sair
+            // 
+            this.btn_sair.Location = new System.Drawing.Point(387, 292);
+            this.btn_sair.Name = "btn_sair";
+            this.btn_sair.Size = new System.Drawing.Size(123, 41);
+            this.btn_sair.TabIndex = 7;
+            this.btn_sair.Text = "Sair";
+            this.btn_sair.UseVisualStyleBackColor = true;
+            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
+            // 
+            // btn_sub
+            // 
+            this.btn_sub.Location = new System.Drawing.Point(387, 99);
+            this.btn_sub.Name = "btn_sub";
+            this.btn_sub.Size = new System.Drawing.Size(123, 41);
+            this.btn_sub.TabIndex = 8;
+            this.btn_sub.Text = "Subtrair";
+            this.btn_sub.UseVisualStyleBackColor = true;
+            this.btn_sub.Click += new System.EventHandler(this.btn_sub_Click);
+            // 
+            // btn_Mult
+            // 
+            this.btn_Mult.Location = new System.Drawing.Point(387, 146);
+            this.btn_Mult.Name = "btn_Mult";
+            this.btn_Mult.Size = new System.Drawing.Size(123, 41);
+            this.btn_Mult.TabIndex = 9;
+            this.btn_Mult.Text = "Multiplicação";
+            this.btn_Mult.UseVisualStyleBackColor = true;
+            this.btn_Mult.Click += new System.EventHandler(this.btn_Mult_Click);
+            // 
+            // btn_div
+            // 
+            this.btn_div.Location = new System.Drawing.Point(387, 193);
+            this.btn_div.Name = "btn_div";
+            this.btn_div.Size = new System.Drawing.Size(123, 41);
+            this.btn_div.TabIndex = 10;
+            this.btn_div.Text = "Divisão";
+            this.btn_div.UseVisualStyleBackColor = true;
+            this.btn_div.Click += new System.EventHandler(this.btn_div_Click);
+            // 
+            // btn_comp
+            // 
+            this.btn_comp.Location = new System.Drawing.Point(68, 223);
+            this.btn_comp.Name = "btn_comp";
+            this.btn_comp.Size = new System.Drawing.Size(100, 41);
+            this.btn_comp.TabIndex = 11;
+            this.btn_comp.Text = "Comparar";
+            this.btn_comp.UseVisualStyleBackColor = true;
+            this.btn_comp.Click += new System.EventHandler(this.btn_comp_Click);
+            // 
+            // btn_Par
+            // 
+            this.btn_Par.Location = new System.Drawing.Point(196, 223);
+            this.btn_Par.Name = "btn_Par";
+            this.btn_Par.Size = new System.Drawing.Size(100, 41);
+            this.btn_Par.TabIndex = 12;
+            this.btn_Par.Text = "Par Ímpar";
+            this.btn_Par.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(580, 366);
+            this.Controls.Add(this.btn_Par);
+            this.Controls.Add(this.btn_comp);
+            this.Controls.Add(this.btn_div);
+            this.Controls.Add(this.btn_Mult);
+            this.Controls.Add(this.btn_sub);
+            this.Controls.Add(this.btn_sair);
+            this.Controls.Add(this.btn_limpar);
+            this.Controls.Add(this.btn_som);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txt_2);
+            this.Controls.Add(this.lbl_resultado);
+            this.Controls.Add(this.lbl_sinal);
+            this.Controls.Add(this.txt_1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -53,7 +195,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_1;
+        private System.Windows.Forms.Label lbl_sinal;
+        private System.Windows.Forms.Label lbl_resultado;
+        private System.Windows.Forms.TextBox txt_2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_som;
+        private System.Windows.Forms.Button btn_limpar;
+        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.Button btn_sub;
+        private System.Windows.Forms.Button btn_Mult;
+        private System.Windows.Forms.Button btn_div;
+        private System.Windows.Forms.Button btn_comp;
+        private System.Windows.Forms.Button btn_Par;
     }
 }
 

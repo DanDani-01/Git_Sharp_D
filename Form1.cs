@@ -16,5 +16,107 @@ namespace Git_Sharp
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_somar_Click(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "+";
+            try
+            {
+                double a = double.Parse(txt_1.Text);
+                double b = double.Parse(txt_2.Text);
+                lbl_resultado.Text = (a + b).ToString();
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Informe apenas números");
+            }
+        }
+
+        private void btn_sub_Click(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "-";
+            try
+            {
+                double a = double.Parse(txt_1.Text);
+                double b = double.Parse(txt_2.Text);
+                lbl_resultado.Text = (a - b).ToString();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Informe apenas números");
+            }
+        }
+
+        private void btn_Mult_Click(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "X";
+            try
+            {
+                double a = double.Parse(txt_1.Text);
+                double b = double.Parse(txt_2.Text);
+                lbl_resultado.Text = (a * b).ToString();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Informe apenas números");
+            }
+        }
+
+        private void btn_div_Click(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "/";
+            try
+            {
+                double a = double.Parse(txt_1.Text);
+                double b = double.Parse(txt_2.Text);
+                lbl_resultado.Text = (a / b).ToString();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Informe apenas números");
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("Impossível divisão por zero");
+            }
+        }
+
+        private void btn_limpar_Click(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "?";
+            lbl_resultado.Text = "?";
+        }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btn_comp_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                double a = double.Parse(txt_1.Text);
+                double b = double.Parse(txt_2.Text);
+                lbl_resultado.Text = (a / b).ToString();
+                if
+            }
+        }
     }
 }
