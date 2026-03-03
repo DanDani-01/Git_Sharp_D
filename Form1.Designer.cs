@@ -32,7 +32,7 @@
             this.lbl_sinal = new System.Windows.Forms.Label();
             this.lbl_resultado = new System.Windows.Forms.Label();
             this.txt_2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.btn_som = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
             this.btn_esc = new System.Windows.Forms.Button();
@@ -77,15 +77,15 @@
             this.txt_2.Size = new System.Drawing.Size(148, 26);
             this.txt_2.TabIndex = 3;
             // 
-            // label3
+            // label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(103, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "_________________";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(103, 135);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(162, 20);
+            this.label.TabIndex = 4;
+            this.label.Text = "_________________";
+            this.label.Click += new System.EventHandler(this.label3_Click);
             // 
             // btn_som
             // 
@@ -181,7 +181,7 @@
             this.Controls.Add(this.btn_esc);
             this.Controls.Add(this.btn_limpar);
             this.Controls.Add(this.btn_som);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.txt_2);
             this.Controls.Add(this.lbl_resultado);
             this.Controls.Add(this.lbl_sinal);
@@ -201,7 +201,7 @@
         private System.Windows.Forms.Label lbl_sinal;
         private System.Windows.Forms.Label lbl_resultado;
         private System.Windows.Forms.TextBox txt_2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btn_som;
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.Button btn_esc;
