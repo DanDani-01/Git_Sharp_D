@@ -34,7 +34,7 @@
             this.txt_2 = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
             this.btn_som = new System.Windows.Forms.Button();
-            this.btn_limpar = new System.Windows.Forms.Button();
+            this.btn_limpa = new System.Windows.Forms.Button();
             this.btn_esc = new System.Windows.Forms.Button();
             this.btn_sub = new System.Windows.Forms.Button();
             this.btn_Mult = new System.Windows.Forms.Button();
@@ -97,15 +97,15 @@
             this.btn_som.UseVisualStyleBackColor = true;
             this.btn_som.Click += new System.EventHandler(this.btn_somar_Click);
             // 
-            // btn_limpar
+            // btn_limpa
             // 
-            this.btn_limpar.Location = new System.Drawing.Point(68, 292);
-            this.btn_limpar.Name = "btn_limpar";
-            this.btn_limpar.Size = new System.Drawing.Size(228, 41);
-            this.btn_limpar.TabIndex = 6;
-            this.btn_limpar.Text = "Limpar";
-            this.btn_limpar.UseVisualStyleBackColor = true;
-            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
+            this.btn_limpa.Location = new System.Drawing.Point(68, 292);
+            this.btn_limpa.Name = "btn_limpa";
+            this.btn_limpa.Size = new System.Drawing.Size(228, 41);
+            this.btn_limpa.TabIndex = 6;
+            this.btn_limpa.Text = "Limpar";
+            this.btn_limpa.UseVisualStyleBackColor = true;
+            this.btn_limpa.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
             // btn_esc
             // 
@@ -179,7 +179,7 @@
             this.Controls.Add(this.btn_Mult);
             this.Controls.Add(this.btn_sub);
             this.Controls.Add(this.btn_esc);
-            this.Controls.Add(this.btn_limpar);
+            this.Controls.Add(this.btn_limpa);
             this.Controls.Add(this.btn_som);
             this.Controls.Add(this.label);
             this.Controls.Add(this.txt_2);
@@ -203,7 +203,7 @@
         private System.Windows.Forms.TextBox txt_2;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btn_som;
-        private System.Windows.Forms.Button btn_limpar;
+        private System.Windows.Forms.Button btn_limpa;
         private System.Windows.Forms.Button btn_esc;
         private System.Windows.Forms.Button btn_sub;
         private System.Windows.Forms.Button btn_Mult;
