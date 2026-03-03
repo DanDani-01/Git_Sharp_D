@@ -40,7 +40,7 @@
             this.btn_Mult = new System.Windows.Forms.Button();
             this.btn_div = new System.Windows.Forms.Button();
             this.btn_comp = new System.Windows.Forms.Button();
-            this.btn_par = new System.Windows.Forms.Button();
+            this.btn_pi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_1
@@ -157,15 +157,15 @@
             this.btn_comp.UseVisualStyleBackColor = true;
             this.btn_comp.Click += new System.EventHandler(this.btn_comp_Click);
             // 
-            // btn_par
+            // btn_pi
             // 
-            this.btn_par.Location = new System.Drawing.Point(196, 245);
-            this.btn_par.Name = "btn_par";
-            this.btn_par.Size = new System.Drawing.Size(100, 41);
-            this.btn_par.TabIndex = 12;
-            this.btn_par.Text = "Par Ímpar";
-            this.btn_par.UseVisualStyleBackColor = true;
-            this.btn_par.Click += new System.EventHandler(this.btn_Par_Click);
+            this.btn_pi.Location = new System.Drawing.Point(196, 245);
+            this.btn_pi.Name = "btn_pi";
+            this.btn_pi.Size = new System.Drawing.Size(100, 41);
+            this.btn_pi.TabIndex = 12;
+            this.btn_pi.Text = "Par Ímpar";
+            this.btn_pi.UseVisualStyleBackColor = true;
+            this.btn_pi.Click += new System.EventHandler(this.btn_Par_Click);
             // 
             // Form1
             // 
@@ -173,7 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(580, 366);
-            this.Controls.Add(this.btn_par);
+            this.Controls.Add(this.btn_pi);
             this.Controls.Add(this.btn_comp);
             this.Controls.Add(this.btn_div);
             this.Controls.Add(this.btn_Mult);
@@ -209,7 +209,7 @@
         private System.Windows.Forms.Button btn_Mult;
         private System.Windows.Forms.Button btn_div;
         private System.Windows.Forms.Button btn_comp;
-        private System.Windows.Forms.Button btn_par;
+        private System.Windows.Forms.Button btn_pi;
     }
 }
 
