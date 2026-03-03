@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_som = new System.Windows.Forms.Button();
             this.btn_limpar = new System.Windows.Forms.Button();
-            this.btn_sair = new System.Windows.Forms.Button();
+            this.btn_esc = new System.Windows.Forms.Button();
             this.btn_sub = new System.Windows.Forms.Button();
             this.btn_Mult = new System.Windows.Forms.Button();
             this.btn_div = new System.Windows.Forms.Button();
@@ -107,15 +107,15 @@
             this.btn_limpar.UseVisualStyleBackColor = true;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
-            // btn_sair
+            // btn_esc
             // 
-            this.btn_sair.Location = new System.Drawing.Point(387, 292);
-            this.btn_sair.Name = "btn_sair";
-            this.btn_sair.Size = new System.Drawing.Size(123, 41);
-            this.btn_sair.TabIndex = 7;
-            this.btn_sair.Text = "Sair";
-            this.btn_sair.UseVisualStyleBackColor = true;
-            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
+            this.btn_esc.Location = new System.Drawing.Point(387, 292);
+            this.btn_esc.Name = "btn_esc";
+            this.btn_esc.Size = new System.Drawing.Size(123, 41);
+            this.btn_esc.TabIndex = 7;
+            this.btn_esc.Text = "Sair";
+            this.btn_esc.UseVisualStyleBackColor = true;
+            this.btn_esc.Click += new System.EventHandler(this.btn_sair_Click);
             // 
             // btn_sub
             // 
@@ -178,7 +178,7 @@
             this.Controls.Add(this.btn_div);
             this.Controls.Add(this.btn_Mult);
             this.Controls.Add(this.btn_sub);
-            this.Controls.Add(this.btn_sair);
+            this.Controls.Add(this.btn_esc);
             this.Controls.Add(this.btn_limpar);
             this.Controls.Add(this.btn_som);
             this.Controls.Add(this.label3);
@@ -204,7 +204,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_som;
         private System.Windows.Forms.Button btn_limpar;
-        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.Button btn_esc;
         private System.Windows.Forms.Button btn_sub;
         private System.Windows.Forms.Button btn_Mult;
         private System.Windows.Forms.Button btn_div;
