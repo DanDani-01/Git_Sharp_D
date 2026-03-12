@@ -35,5 +35,10 @@ namespace Git_Sharp.formularios
                e.Cancel = true;
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToString();
+        }
     }
 }

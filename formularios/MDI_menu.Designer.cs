@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDI_menu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cálculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,8 +53,13 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lbl_stat = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_mens = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_hora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -79,7 +85,7 @@
             this.toolStripMenuItem1,
             this.sairToolStripMenuItem});
             this.cálculosToolStripMenuItem.Name = "cálculosToolStripMenuItem";
-            this.cálculosToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.cálculosToolStripMenuItem.Size = new System.Drawing.Size(93, 32);
             this.cálculosToolStripMenuItem.Text = "Cálculos";
             // 
             // comBotõesToolStripMenuItem
@@ -135,7 +141,7 @@
             this.horizontalmenteToolStripMenuItem,
             this.verticalmenteToolStripMenuItem});
             this.janelasToolStripMenuItem.Name = "janelasToolStripMenuItem";
-            this.janelasToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
+            this.janelasToolStripMenuItem.Size = new System.Drawing.Size(83, 32);
             this.janelasToolStripMenuItem.Text = "Janelas";
             // 
             // cascataToolStripMenuItem
@@ -162,7 +168,7 @@
             this.sobreToolStripMenuItem,
             this.desenvolvedoresToolStripMenuItem});
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(74, 32);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
             // 
             // sobreToolStripMenuItem
@@ -208,7 +214,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 33);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripButton3
@@ -217,13 +223,13 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton3.Size = new System.Drawing.Size(34, 33);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // toolStripDropDownButton1
             // 
@@ -231,17 +237,48 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 33);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl_stat,
+            this.lbl_mens,
+            this.lbl_hora});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 418);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 32);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lbl_stat
+            // 
+            this.lbl_stat.Name = "lbl_stat";
+            this.lbl_stat.Size = new System.Drawing.Size(143, 25);
+            this.lbl_stat.Text = "Usuário logado: ";
+            this.lbl_stat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_mens
+            // 
+            this.lbl_mens.Name = "lbl_mens";
+            this.lbl_mens.Size = new System.Drawing.Size(102, 25);
+            this.lbl_mens.Text = "Mensagens";
+            this.lbl_mens.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(104, 25);
+            this.lbl_hora.Text = "Data/Hora: ";
+            this.lbl_hora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MDI_menu
             // 
@@ -260,6 +297,8 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +329,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_stat;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_mens;
+        private System.Windows.Forms.ToolStripStatusLabel lbl_hora;
+        private System.Windows.Forms.Timer timer1;
     }
 }
