@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.gb_Ope = new System.Windows.Forms.GroupBox();
-            this.rb_som = new System.Windows.Forms.RadioButton();
-            this.rb_sub = new System.Windows.Forms.RadioButton();
-            this.rb_div = new System.Windows.Forms.RadioButton();
-            this.rb_mult = new System.Windows.Forms.RadioButton();
             this.rb_pot = new System.Windows.Forms.RadioButton();
+            this.rb_mult = new System.Windows.Forms.RadioButton();
+            this.rb_div = new System.Windows.Forms.RadioButton();
+            this.rb_sub = new System.Windows.Forms.RadioButton();
+            this.rb_som = new System.Windows.Forms.RadioButton();
             this.btn_cal = new System.Windows.Forms.Button();
             this.btn_limp = new System.Windows.Forms.Button();
             this.btn_fec = new System.Windows.Forms.Button();
@@ -59,38 +59,17 @@
             this.gb_Ope.TabStop = false;
             this.gb_Ope.Text = "Operações";
             // 
-            // rb_som
+            // rb_pot
             // 
-            this.rb_som.AutoSize = true;
-            this.rb_som.Location = new System.Drawing.Point(6, 35);
-            this.rb_som.Name = "rb_som";
-            this.rb_som.Size = new System.Drawing.Size(81, 24);
-            this.rb_som.TabIndex = 1;
-            this.rb_som.TabStop = true;
-            this.rb_som.Text = "Somar";
-            this.rb_som.UseVisualStyleBackColor = true;
-            // 
-            // rb_sub
-            // 
-            this.rb_sub.AutoSize = true;
-            this.rb_sub.Location = new System.Drawing.Point(6, 74);
-            this.rb_sub.Name = "rb_sub";
-            this.rb_sub.Size = new System.Drawing.Size(90, 24);
-            this.rb_sub.TabIndex = 2;
-            this.rb_sub.TabStop = true;
-            this.rb_sub.Text = "Subtrair";
-            this.rb_sub.UseVisualStyleBackColor = true;
-            // 
-            // rb_div
-            // 
-            this.rb_div.AutoSize = true;
-            this.rb_div.Location = new System.Drawing.Point(6, 113);
-            this.rb_div.Name = "rb_div";
-            this.rb_div.Size = new System.Drawing.Size(85, 24);
-            this.rb_div.TabIndex = 3;
-            this.rb_div.TabStop = true;
-            this.rb_div.Text = "Divisão";
-            this.rb_div.UseVisualStyleBackColor = true;
+            this.rb_pot.AutoSize = true;
+            this.rb_pot.Location = new System.Drawing.Point(6, 196);
+            this.rb_pot.Name = "rb_pot";
+            this.rb_pot.Size = new System.Drawing.Size(122, 24);
+            this.rb_pot.TabIndex = 1;
+            this.rb_pot.TabStop = true;
+            this.rb_pot.Text = "Potenciação";
+            this.rb_pot.UseVisualStyleBackColor = true;
+            this.rb_pot.CheckedChanged += new System.EventHandler(this.rb_pot_CheckedChanged);
             // 
             // rb_mult
             // 
@@ -102,17 +81,43 @@
             this.rb_mult.TabStop = true;
             this.rb_mult.Text = "Multiplicação";
             this.rb_mult.UseVisualStyleBackColor = true;
+            this.rb_mult.CheckedChanged += new System.EventHandler(this.rb_mult_CheckedChanged);
             // 
-            // rb_pot
+            // rb_div
             // 
-            this.rb_pot.AutoSize = true;
-            this.rb_pot.Location = new System.Drawing.Point(6, 196);
-            this.rb_pot.Name = "rb_pot";
-            this.rb_pot.Size = new System.Drawing.Size(122, 24);
-            this.rb_pot.TabIndex = 1;
-            this.rb_pot.TabStop = true;
-            this.rb_pot.Text = "Potenciação";
-            this.rb_pot.UseVisualStyleBackColor = true;
+            this.rb_div.AutoSize = true;
+            this.rb_div.Location = new System.Drawing.Point(6, 113);
+            this.rb_div.Name = "rb_div";
+            this.rb_div.Size = new System.Drawing.Size(85, 24);
+            this.rb_div.TabIndex = 3;
+            this.rb_div.TabStop = true;
+            this.rb_div.Text = "Divisão";
+            this.rb_div.UseVisualStyleBackColor = true;
+            this.rb_div.CheckedChanged += new System.EventHandler(this.rb_div_CheckedChanged);
+            // 
+            // rb_sub
+            // 
+            this.rb_sub.AutoSize = true;
+            this.rb_sub.Location = new System.Drawing.Point(6, 74);
+            this.rb_sub.Name = "rb_sub";
+            this.rb_sub.Size = new System.Drawing.Size(90, 24);
+            this.rb_sub.TabIndex = 2;
+            this.rb_sub.TabStop = true;
+            this.rb_sub.Text = "Subtrair";
+            this.rb_sub.UseVisualStyleBackColor = true;
+            this.rb_sub.CheckedChanged += new System.EventHandler(this.rb_sub_CheckedChanged);
+            // 
+            // rb_som
+            // 
+            this.rb_som.AutoSize = true;
+            this.rb_som.Location = new System.Drawing.Point(6, 35);
+            this.rb_som.Name = "rb_som";
+            this.rb_som.Size = new System.Drawing.Size(81, 24);
+            this.rb_som.TabIndex = 1;
+            this.rb_som.TabStop = true;
+            this.rb_som.Text = "Somar";
+            this.rb_som.UseVisualStyleBackColor = true;
+            this.rb_som.CheckedChanged += new System.EventHandler(this.rb_som_CheckedChanged);
             // 
             // btn_cal
             // 
@@ -122,6 +127,7 @@
             this.btn_cal.TabIndex = 1;
             this.btn_cal.Text = "Calcular";
             this.btn_cal.UseVisualStyleBackColor = true;
+            this.btn_cal.Click += new System.EventHandler(this.btn_cal_Click);
             // 
             // btn_limp
             // 
@@ -131,6 +137,7 @@
             this.btn_limp.TabIndex = 2;
             this.btn_limp.Text = "Limpar";
             this.btn_limp.UseVisualStyleBackColor = true;
+            this.btn_limp.Click += new System.EventHandler(this.btn_limp_Click);
             // 
             // btn_fec
             // 
@@ -140,14 +147,16 @@
             this.btn_fec.TabIndex = 3;
             this.btn_fec.Text = "Fechar";
             this.btn_fec.UseVisualStyleBackColor = true;
+            this.btn_fec.Click += new System.EventHandler(this.btn_fec_Click);
             // 
             // lbl_sinal
             // 
             this.lbl_sinal.AutoSize = true;
             this.lbl_sinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_sinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sinal.Location = new System.Drawing.Point(285, 99);
             this.lbl_sinal.Name = "lbl_sinal";
-            this.lbl_sinal.Size = new System.Drawing.Size(20, 22);
+            this.lbl_sinal.Size = new System.Drawing.Size(25, 27);
             this.lbl_sinal.TabIndex = 4;
             this.lbl_sinal.Text = "?";
             // 
@@ -176,13 +185,13 @@
             // 
             // lbl_resp
             // 
-            this.lbl_resp.AutoSize = true;
-            this.lbl_resp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_resp.Location = new System.Drawing.Point(397, 153);
+            this.lbl_resp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_resp.Location = new System.Drawing.Point(323, 145);
             this.lbl_resp.Name = "lbl_resp";
-            this.lbl_resp.Size = new System.Drawing.Size(20, 22);
+            this.lbl_resp.Size = new System.Drawing.Size(167, 30);
             this.lbl_resp.TabIndex = 8;
             this.lbl_resp.Text = "?";
+            this.lbl_resp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmRadio
             // 

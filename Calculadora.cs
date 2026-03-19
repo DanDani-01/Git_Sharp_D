@@ -106,7 +106,7 @@ namespace Git_Sharp
 
         private void btn_sair_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            Close();
         }
 
         private void btn_comp_Click(object sender, EventArgs e)

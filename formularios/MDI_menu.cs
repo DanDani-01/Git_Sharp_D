@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Git_Sharp.formularios
 {
@@ -24,8 +25,21 @@ namespace Git_Sharp.formularios
 
         private void comBotõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Calculadora novoForm = new Calculadora();
-            novoForm.MdiParent = this;
+            // Procura se já existe um formulário Calculadora aberto
+            foreach (Form formAberto in this.MdiChildren)
+            {
+                if (formAberto is Calculadora)
+                {
+                    formAberto.Activate(); // Traz para frente
+                    return; // Sai do método, não cria outro
+                }
+            }
+
+            // Se não encontrou, cria um novo
+            Calculadora novoForm = new Calculadora
+            {
+                MdiParent = this
+            };
             novoForm.Show();
         }
 
@@ -45,9 +59,45 @@ namespace Git_Sharp.formularios
 
         private void comRadioButtonsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRadio novoForm = new frmRadio();
-            novoForm.MdiParent = this;
+            foreach (Form formAberto in this.MdiChildren)
+            {
+                if (formAberto is frmRadio)
+                {
+                    formAberto.Activate();
+                    return; 
+                }
+            }
+
+            frmRadio novoForm = new frmRadio
+            {
+                MdiParent = this
+            };
             novoForm.Show();
+        }
+
+        private void MDI_menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void horizontalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void verticalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void novoToolStripButton_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe");
         }
     }
 }

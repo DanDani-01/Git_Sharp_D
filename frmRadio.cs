@@ -16,5 +16,87 @@ namespace Git_Sharp
         {
             InitializeComponent();
         }
+
+        private void rb_som_CheckedChanged(object sender, EventArgs e)
+        {
+
+            lbl_sinal.Text = "+";
+
+        }
+
+        private void btn_cal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rb_som.Checked)
+                {
+                    double a = double.Parse(txt_pri.Text);
+                    double b = double.Parse(txt_sec.Text);
+                    lbl_resp.Text = (a + b).ToString();
+                }
+                if (rb_sub.Checked)
+                {
+                    double a = double.Parse(txt_pri.Text);
+                    double b = double.Parse(txt_sec.Text);
+                    lbl_resp.Text = (a - b).ToString();
+                }
+                if (rb_mult.Checked)
+                {
+                    double a = double.Parse(txt_pri.Text);
+                    double b = double.Parse(txt_sec.Text);
+                    lbl_resp.Text = (a * b).ToString();
+                }
+                if (rb_div.Checked)
+                {
+                    double a = double.Parse(txt_pri.Text);
+                    double b = double.Parse(txt_sec.Text);
+                    lbl_resp.Text = (a / b).ToString();
+                }
+                if (rb_pot.Checked)
+                {
+                    double a = double.Parse(txt_pri.Text);
+                    double b = double.Parse(txt_sec.Text);
+                    double res = Math.Pow(a, b);
+                    lbl_resp.Text = (res).ToString();
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Informe apenas números");
+            }
+        }
+
+        private void rb_sub_CheckedChanged(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "-";
+        }
+
+        private void rb_div_CheckedChanged(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "/";
+        }
+
+        private void rb_mult_CheckedChanged(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "X";
+        }
+
+        private void rb_pot_CheckedChanged(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "^";
+        }
+
+        private void btn_limp_Click(object sender, EventArgs e)
+        {
+            lbl_sinal.Text = "?";
+            lbl_resp.Text = "?";
+            txt_pri.Clear();
+            txt_sec.Clear();
+        }
+
+        private void btn_fec_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
